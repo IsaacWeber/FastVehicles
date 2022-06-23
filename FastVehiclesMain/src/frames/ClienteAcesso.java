@@ -714,10 +714,11 @@ public class ClienteAcesso extends javax.swing.JFrame
                 }else {
                     if(searchText.equals(String.valueOf(
                         tblModelCarro.getValueAt(i, column)).trim())) { //procura valor na linha i coluna 'column' de ids
-                found = true;
-                tblCarro.addRowSelectionInterval(i, i); //seleciona linha
-            }
-            }
+                        found = true;
+                        tblCarro.addRowSelectionInterval(i, i); //seleciona linha
+                    }
+                }
+                
             }
 
             if(!found) { //se n foi encontrado

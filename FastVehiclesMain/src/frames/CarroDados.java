@@ -609,6 +609,22 @@ public class CarroDados extends javax.swing.JFrame
             lblMotor.setText("Engine");
             lblCavalos.setText("Horses");
             lblPortas.setText("Doors");
+            
+            //tips
+            txtId.setToolTipText("Vehicle id");
+            txtTipo.setToolTipText("Vehicle type");
+            txtMarca.setToolTipText("Vehicle brand");
+            txtModelo.setToolTipText("Vehicle model");
+            txtCor.setToolTipText("Vehicle color");
+            txtCombustivel.setToolTipText("Vehicle fuel");
+            spAno.setToolTipText("Vehicle year");
+            spKm.setToolTipText("Vehicle mileage");
+            txtPlaca.setToolTipText("Vehicle plate");
+            spCaucao.setToolTipText("Vehicle deposit");
+            spValorDiario.setToolTipText("Vehicle rent day");
+            txtMotor.setToolTipText("Vehicle engine");
+            spCavalos.setToolTipText("Car horses");
+            spPortas.setToolTipText("Car doors");
         
 	}else if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) { //se for portugues
             setTitle("FastVehicles | Dados Carro - " 
@@ -627,6 +643,22 @@ public class CarroDados extends javax.swing.JFrame
             lblMotor.setText("Motor");
             lblCavalos.setText("Cavalos");
             lblPortas.setText("Portas");
+
+                        //tips
+            txtId.setToolTipText("Id do veículo");
+            txtTipo.setToolTipText("Tipo do veículo");
+            txtMarca.setToolTipText("Marca do veículo");
+            txtModelo.setToolTipText("Modelo do veículo");
+            txtCor.setToolTipText("Cor do veículo");
+            txtCombustivel.setToolTipText("Combustível do veículo");
+            spAno.setToolTipText("Ano do veículo");
+            spKm.setToolTipText("Quilometragem do veículo");
+            txtPlaca.setToolTipText("Placa do veículo");
+            spCaucao.setToolTipText("Caução do veículo");
+            spValorDiario.setToolTipText("Valor diário do veículo");
+            txtMotor.setToolTipText("Motor do veículo");
+            spCavalos.setToolTipText("Cavalos do carro");
+            spPortas.setToolTipText("Portas do carro");
 
 	}
    }

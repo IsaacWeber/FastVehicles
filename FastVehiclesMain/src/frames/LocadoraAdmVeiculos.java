@@ -31,6 +31,7 @@ import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableColumnModel;
@@ -184,7 +185,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("FastVehicles | Gerenciar Veículos");
 
-        tbVeiculo.setToolTipText("Todos os veículos desta locadora");
+        tbVeiculo.setToolTipText("");
 
         btnPesquisa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
         btnPesquisa1.setToolTipText("Clique para pesquisar");
@@ -194,7 +195,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
             }
         });
 
-        txtPesquisa1.setToolTipText("Campo de pesquisa");
+        txtPesquisa1.setToolTipText("Barra de pesquisa");
         txtPesquisa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPesquisa1ActionPerformed(evt);
@@ -212,11 +213,12 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tblCarro.setToolTipText("Tabela de carros");
+        tblCarro.setToolTipText("carros");
         scrlTblVeiculo.setViewportView(tblCarro);
 
         btnExcluir2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete.png"))); // NOI18N
         btnExcluir2.setText("Excluir");
+        btnExcluir2.setToolTipText("Deletar moto, 1 por vez");
         btnExcluir2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExcluir2ActionPerformed(evt);
@@ -227,7 +229,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
         rdId1.setToolTipText("Pesquise por Id");
 
         rdPlaca1.setText("placa");
-        rdPlaca1.setToolTipText("Pesquise por cpf");
+        rdPlaca1.setToolTipText("Pesquise por placa");
         rdPlaca1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdPlaca1ActionPerformed(evt);
@@ -235,16 +237,16 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
         });
 
         rdModelo1.setText("modelo");
-        rdModelo1.setToolTipText("Pesquise por rg");
+        rdModelo1.setToolTipText("Pesquise por modelo");
 
         rdMarca1.setText("marca");
-        rdMarca1.setToolTipText("Pesquise por email");
+        rdMarca1.setToolTipText("Pesquise por marca");
 
         rdTipo1.setText("tipo");
-        rdTipo1.setToolTipText("Pesquise por cnh");
+        rdTipo1.setToolTipText("Pesquise por tipo");
 
         rdAno1.setText("ano");
-        rdAno1.setToolTipText("Pesquise por telefone");
+        rdAno1.setToolTipText("Pesquise por ano");
         rdAno1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdAno1ActionPerformed(evt);
@@ -252,6 +254,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
         });
 
         rdCor1.setText("cor");
+        rdCor1.setToolTipText("Pesquise por cor");
         rdCor1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdCor1ActionPerformed(evt);
@@ -304,7 +307,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tblMoto.setToolTipText("Tabela de motos");
+        tblMoto.setToolTipText("motos");
         jScrollPane2.setViewportView(tblMoto);
 
         btnExcluir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete.png"))); // NOI18N
@@ -335,7 +338,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
         rdId2.setToolTipText("Pesquise por Id");
 
         rdPlaca2.setText("placa");
-        rdPlaca2.setToolTipText("Pesquise por cpf");
+        rdPlaca2.setToolTipText("Pesquise por placa");
         rdPlaca2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdPlaca2ActionPerformed(evt);
@@ -343,18 +346,19 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
         });
 
         rdModelo2.setText("modelo");
-        rdModelo2.setToolTipText("Pesquise por rg");
+        rdModelo2.setToolTipText("Pesquise por modelo");
 
         rdMarca2.setText("marca");
-        rdMarca2.setToolTipText("Pesquise por email");
+        rdMarca2.setToolTipText("Pesquise por marca");
 
         rdTipo2.setText("tipo");
-        rdTipo2.setToolTipText("Pesquise por cnh");
+        rdTipo2.setToolTipText("Pesquise por tipo");
 
         rdAno2.setText("ano");
-        rdAno2.setToolTipText("Pesquise por telefone");
+        rdAno2.setToolTipText("Pesquise por ano");
 
         rdCor2.setText("cor");
+        rdCor2.setToolTipText("Pesquise por cor");
         rdCor2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdCor2ActionPerformed(evt);
@@ -407,7 +411,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
 
         btnEdicao2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
         btnEdicao2.setText("Editar");
-        btnEdicao2.setToolTipText("Edite um carro");
+        btnEdicao2.setToolTipText("Edite uma moto");
         btnEdicao2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEdicao2ActionPerformed(evt);
@@ -613,6 +617,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
 
         btnCad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/signup.png"))); // NOI18N
         btnCad.setText("Cadastrar");
+        btnCad.setToolTipText("Cadastrar veículo");
         btnCad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadActionPerformed(evt);
@@ -908,8 +913,15 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
                                         //mensagem de cadastro com sucesso
                                          URL url = getClass().getResource("/images/success.png");
                                          ImageIcon sucessIcon = new ImageIcon(url);
-                                         JOptionPane.showMessageDialog(this, "Carro cadastrado com sucesso!", 
-                                             "Veículo cadastrado!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+                                         if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                                            JOptionPane.showMessageDialog(this, "Carro cadastrado com sucesso!", 
+                                                      "Veículo cadastrado!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+                                        }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                                            JOptionPane.showMessageDialog(this, "Car successfully registered!", 
+                                                "Vehicle Registered!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+                                        }
+                                         
+      
                        
                                     }else { //se for moto
                                         
@@ -932,42 +944,101 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
                                         //mensagem de cadastro com sucesso
                                          URL url = getClass().getResource("/images/success.png");
                                          ImageIcon sucessIcon = new ImageIcon(url);
-                                         JOptionPane.showMessageDialog(this, "Moto cadastrada com sucesso!", 
-                                             "Veículo cadastrado!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
-                                        
+                                         
+                                         if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                                            JOptionPane.showMessageDialog(this, "Moto cadastrada com sucesso!", 
+                                                "Veículo cadastrado!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+                                        }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                                            JOptionPane.showMessageDialog(this, "Bike successfully registered!", 
+                                                "Vehicle Registered!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+                                        }
+  
                                     }
                                     
                                     resetaCampos();//resta os dados - reset data
                                 }else {
-                                     JOptionPane.showMessageDialog(this, "O campo \'Motor\' está vazio", "Motor vazio", 
-                                          JOptionPane.ERROR_MESSAGE);
+                                    
+                                    if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {                                   
+                                        JOptionPane.showMessageDialog(this, "O campo \'Motor\' está vazio!", "Campo Motor Vazio!", 
+                                             JOptionPane.ERROR_MESSAGE);
+                                    }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {                  
+                                        JOptionPane.showMessageDialog(this, "\'Engine\' field is empty!", "Empty Engine Field!", 
+                                            JOptionPane.ERROR_MESSAGE);
+                                    }
+
                                  }
+                                
                              }else {
-                                 JOptionPane.showMessageDialog(this, "O campo \'Placa\' está vazio", "Placa vazia", 
-                                      JOptionPane.ERROR_MESSAGE);
+                                
+                                if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                                    JOptionPane.showMessageDialog(this, "O campo \'Placa\' está vazio!", "Campo Placa Vazio!", 
+                                         JOptionPane.ERROR_MESSAGE);
+                                }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                                    JOptionPane.showMessageDialog(this, "\'Plate\' field is empty!", "Empty Plate Field!",
+                                        JOptionPane.ERROR_MESSAGE);
+                                }
+
                              }
+                            
                         }else {
-                            JOptionPane.showMessageDialog(this, "O campo \'Cor\' está vazio", "Cor vazia", 
-                                JOptionPane.ERROR_MESSAGE);
+                           
+                           if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                                JOptionPane.showMessageDialog(this, "O campo \'Cor\' está vazio!", "Campo Cor Vazio!", 
+                                    JOptionPane.ERROR_MESSAGE); 
+                            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                                JOptionPane.showMessageDialog(this, "\'Color\' field is empty!", "Empty Color Field!",
+                                    JOptionPane.ERROR_MESSAGE);
+                            }
+
                         }
                         
                     }else {
-                        JOptionPane.showMessageDialog(this, "O campo \'Combustível\' está vazio", "Combustível vazio", 
-                             JOptionPane.ERROR_MESSAGE);
+                       
+                       if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                            JOptionPane.showMessageDialog(this, "O campo \'Combustível\' está vazio!", "Campo Combustível Vazio!", 
+                                JOptionPane.ERROR_MESSAGE);
+                        }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                            JOptionPane.showMessageDialog(this, "\'Fuel\' field is empty!", "Empty Fuel Field!",
+                                JOptionPane.ERROR_MESSAGE);
+                        }
+                       
+
                     }
+                   
                 }else {
-                    JOptionPane.showMessageDialog(this, "O campo \'Modelo\' está vazio", "Modelo vazio", 
-                         JOptionPane.ERROR_MESSAGE);
+                   
+                   if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                        JOptionPane.showMessageDialog(this, "O campo \'Modelo\' está vazio!", "Campo Modelo Vazio!", 
+                             JOptionPane.ERROR_MESSAGE);
+                    }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                        JOptionPane.showMessageDialog(this, "\'Model\' field is empty!", "Empty Model Field!",
+                            JOptionPane.ERROR_MESSAGE);
+                    }
+                   
                 }
                
            }else {
-               JOptionPane.showMessageDialog(this, "O campo \'Marca\' está vazio", "Marca vazia", 
-                    JOptionPane.ERROR_MESSAGE);
+               
+                if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {               
+                    JOptionPane.showMessageDialog(this, "O campo \'Marca\' está vazio!", "Campo Marca Vazio!", 
+                         JOptionPane.ERROR_MESSAGE);
+                }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                    JOptionPane.showMessageDialog(this, "\'Brand\' field is empty!", "Empty Brand Field!",
+                        JOptionPane.ERROR_MESSAGE);
+                }
+
            }
            
         }else{
-            JOptionPane.showMessageDialog(this, "O campo \'Tipo\' está vazio", "Tipo vazio", 
+            if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                JOptionPane.showMessageDialog(this, "O campo \'Tipo\' está vazio!", "Campo Tipo Vazio!", 
                     JOptionPane.ERROR_MESSAGE);
+            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                JOptionPane.showMessageDialog(this, "\'Type\' field is empty!", "Empty Type Field!",
+                    JOptionPane.ERROR_MESSAGE);
+            }
+            
+
         }
             
     }//GEN-LAST:event_btnCadActionPerformed
@@ -986,72 +1057,89 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
 
     private void btnPesquisa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisa2ActionPerformed
         tblMoto.clearSelection(); //limpa selecoes - clear selections
+        if(!placeholderOrEmpty(txtPesquisa2)) { //se barra de pesquisa n esta vazia
+            
+            String searchText = txtPesquisa2.getText(); //pega texto de pesquisa 
+            boolean found = false;
+            String type = "Id";
+            int column = 0;
 
-        boolean found = false;
-        String type = "Id"; //primeiro tipo id - first type id
-        int column = 0; //coluna do id - id column
-        String searchText = txtPesquisa2.getText(); //pega texto de pesquisa
-
-        //edita a coluna e tipo de dado - edit column and data type
-        if(rdTipo2.isSelected()) {
-            column = 1;
-            type = "Tipo";
-        }else if(rdMarca2.isSelected()) {
-            column = 2;
-            type = "Marca";
-        }else if(rdModelo2.isSelected()) {
-            column = 3;
-            type = "Modelo";
-        }else if(rdCor2.isSelected()) {
-            column = 4;
-            type = "Cor";
-        }else if(rdPlaca2.isSelected()) {
-            column = 5;
-            type = "Placa";
-        }else if(rdAno2.isSelected()) {
-            column = 6;
-            type = "Ano";
-        }
-
-        for(int i = 0; i < tblModelMoto.getRowCount(); ++i) { //percorre tabela
-            if(!rdId2.isSelected()) { //se n for rdId q esta selecionaddo
-                String nome = String.valueOf(tblModelMoto.getValueAt(i, column)).trim();
-
-                if(nome.toLowerCase().contains(searchText)
-                    || nome.toUpperCase().contains(searchText) ) { //se contiver nome capitalizado ou não
-                    found = true;
-                    tblMoto.addRowSelectionInterval(i, i); //seleciona linha
-                }
-            }else {
-                if(searchText.equals(String.valueOf(
-                    tblModelMoto.getValueAt(i, column)).trim())) { //procura valor na linha i coluna 'column' de ids
-                    found = true;
-                    tblMoto.addRowSelectionInterval(i, i); //seleciona linha
-                }   
+            //edita a coluna e tipo de dado - edit column and data type
+            if(rdTipo2.isSelected()) {
+                column = 1;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Tipo"
+                        : "Type";
+            }else if(rdMarca2.isSelected()) {
+                column = 2;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Marca"
+                        : "Brand";
+            }else if(rdModelo2.isSelected()) {
+                column = 3;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Modelo"
+                        : "Model";
+            }else if(rdCor2.isSelected()) {
+                column = 4;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Cor"
+                        : "Color";
+            }else if(rdPlaca2.isSelected()) {
+                column = 5;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Placa"
+                        : "Plate";
+            }else if(rdAno2.isSelected()) {
+                column = 6;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Ano"
+                        : "Year";
             }
-        }
 
-        if(!found) { //se n foi encontrado
-            JOptionPane.showMessageDialog(this, type + " { " + searchText + " } de moto não encontrado !",
-                type + " Não Encontrado", JOptionPane.ERROR_MESSAGE);
-        }
+            for(int i = 0; i < tblModelMoto.getRowCount(); ++i) { //percorre tabela
+                if(!rdId2.isSelected()) { //se n for rdId q esta selecionaddo
+                    String nome = String.valueOf(tblModelMoto.getValueAt(i, column)).trim();
 
-        //use se precisar - take it if it is nedded
-        //        if(rdId.isSelected()) {
-            //            long id = Long.parseLong(txtPesquisa.getText()); //pega id de pesquisa
-            //
-            //            for(int i = 0; i < tblModel.getRowCount(); ++i) { //percorre tabela
-                //                if(id == (Long)tblModel.getValueAt(i, 0)) { //procura id na linha i coluna 0 de ids
-                    //                    found = true;
-                    //                    tblCliente.setRowSelectionInterval(i, i); //seleciona linha
-                    //                }
-                //            }
-            //
-            //            if(!found) { //se n foi encontrado
-                //                JOptionPane.showMessageDialog(this, "Id { " + id + " } não encontrado!",
-                    //                    "Id Não Encontrado", JOptionPane.ERROR_MESSAGE);
-                //            }
-            //        }
+                    if(nome.toLowerCase().contains(searchText)
+                        || nome.toUpperCase().contains(searchText) ) { //se contiver nome capitalizado ou não
+                        found = true;
+                        tblMoto.addRowSelectionInterval(i, i); //seleciona linha
+                    }
+                }else {
+                    if(searchText.equals(String.valueOf(
+                        tblModelMoto.getValueAt(i, column)).trim())) { //procura valor na linha i coluna 'column' de ids
+                        found = true;
+                        tblMoto.addRowSelectionInterval(i, i); //seleciona linha
+                    }   
+                }
+            }
+
+            if(!found) { //se n foi encontrado
+                if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                    JOptionPane.showMessageDialog(this, type + " { " + searchText + " } não encontrado!",
+                        type + " Não Encontrado!", JOptionPane.ERROR_MESSAGE);
+                }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                    JOptionPane.showMessageDialog(this, type + " { " + searchText + " } not found!",
+                        type + " Not Found!", JOptionPane.ERROR_MESSAGE);
+                }
+
+
+            }
+
+        
+        }else { //se barra de pesquisa vazia
+
+            if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                JOptionPane.showMessageDialog(this, "Preencha a barra de pesquisa!", 
+                        "Barra de Pesquisa Vazia!", JOptionPane.ERROR_MESSAGE);
+            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                JOptionPane.showMessageDialog(this, "Fill out search bar!", 
+                    "Empty Search Bar!", JOptionPane.ERROR_MESSAGE);
+            }
+
+        }
+        
     }//GEN-LAST:event_btnPesquisa2ActionPerformed
 
     private void btnExcluir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluir1ActionPerformed
@@ -1098,11 +1186,26 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
             //mensagem de exclusap com sucesso
              URL url = getClass().getResource("/images/success.png");
              ImageIcon sucessIcon = new ImageIcon(url);
-             JOptionPane.showMessageDialog(this, "Carro excluído com sucesso!", 
-                 "Carro Excluído!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+             
+            if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                JOptionPane.showMessageDialog(this, "Carro excluído com sucesso!", 
+                    "Carro Excluído!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                JOptionPane.showMessageDialog(this, "Car successfully deleted!", 
+                    "Car Deleted!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+            }
+             
+
         }else { //se a linha nao esta selecionada - if line is not selected
-            JOptionPane.showMessageDialog(this, "Linha não selecionada",
-                "Sem Seleção!", JOptionPane.ERROR_MESSAGE);
+            
+            if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {            
+                JOptionPane.showMessageDialog(this, "Linha não selecionada!",
+                    "Sem Seleção!", JOptionPane.ERROR_MESSAGE);
+            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {                           
+                JOptionPane.showMessageDialog(this, "Select a line!",
+                    "No Selection!", JOptionPane.ERROR_MESSAGE);
+            }
+            
         }
     }//GEN-LAST:event_btnExcluir1ActionPerformed
 
@@ -1158,11 +1261,25 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
             //mensagem de exclusap com sucesso
              URL url = getClass().getResource("/images/success.png");
              ImageIcon sucessIcon = new ImageIcon(url);
-             JOptionPane.showMessageDialog(this, "Moto excluída com sucesso!", 
-                 "Moto Excluída!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+             
+            if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                JOptionPane.showMessageDialog(this, "Moto excluída com sucesso!", 
+                    "Moto Excluída!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                JOptionPane.showMessageDialog(this, "Bike successfully deleted!", 
+                    "Bike Deleted!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+            }
+
         }else { //se a linha nao esta selecionada - if line is not selected
-            JOptionPane.showMessageDialog(this, "Linha não selecionada",
-                "Sem Seleção!", JOptionPane.ERROR_MESSAGE);
+            
+            if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {            
+                JOptionPane.showMessageDialog(this, "Linha não selecionada!",
+                    "Sem Seleção!", JOptionPane.ERROR_MESSAGE);
+            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {                           
+                JOptionPane.showMessageDialog(this, "Select a line!",
+                    "No Selection!", JOptionPane.ERROR_MESSAGE);
+            }
+
         }
     }//GEN-LAST:event_btnExcluir2ActionPerformed
 
@@ -1173,71 +1290,86 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
     private void btnPesquisa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisa1ActionPerformed
         tblCarro.clearSelection(); //limpa selecoes - clear selections
 
-        boolean found = false;
-        String type = "Id"; //primeiro tipo id - first type id
-        int column = 0; //coluna do id - id column
-        String searchText = txtPesquisa1.getText(); //pega texto de pesquisa
-
-        //edita a coluna e tipo de dado - edit column and data type
-        if(rdTipo1.isSelected()) {
-            column = 1;
-            type = "Tipo";
-        }else if(rdMarca1.isSelected()) {
-            column = 2;
-            type = "Marca";
-        }else if(rdModelo1.isSelected()) {
-            column = 3;
-            type = "Modelo";
-        }else if(rdCor1.isSelected()) {
-            column = 4;
-            type = "Cor";
-        }else if(rdPlaca1.isSelected()) {
-            column = 5;
-            type = "Placa";
-        }else if(rdAno1.isSelected()) {
-            column = 6;
-            type = "Ano";
-        }
-
-        for(int i = 0; i < tblModelCarro.getRowCount(); ++i) { //percorre tabela
-            if(!rdId1.isSelected()) { //se n for rdId q esta selecionaddo
-                String nome = String.valueOf(tblModelCarro.getValueAt(i, column)).trim();
-
-                if(nome.toLowerCase().contains(searchText)
-                    || nome.toUpperCase().contains(searchText) ) { //se contiver nome capitalizado ou não
-                    found = true;
-                    tblCarro.addRowSelectionInterval(i, i); //seleciona linha
-                }
-            }else {
-                if(searchText.equals(String.valueOf(
-                    tblModelCarro.getValueAt(i, column)).trim())) { //procura valor na linha i coluna 'column' de ids
-                    found = true;
-                    tblCarro.addRowSelectionInterval(i, i); //seleciona linha
-                }   
+        if(!placeholderOrEmpty(txtPesquisa1)) { //se barra de pesquisa n esta vazia
+            
+            String searchText = txtPesquisa1.getText(); //pega texto de pesquisa 
+            boolean found = false;
+            String type = "Id";
+            int column = 0;
+            
+            //edita a coluna e tipo de dado - edit column and data type
+            if(rdTipo1.isSelected()) {
+                column = 1;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Tipo"
+                        : "Type";
+            }else if(rdMarca1.isSelected()) {
+                column = 2;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Marca"
+                        : "Brand";
+            }else if(rdModelo1.isSelected()) {
+                column = 3;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Modelo"
+                        : "Model";
+            }else if(rdCor1.isSelected()) {
+                column = 4;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Cor"
+                        : "Color";
+            }else if(rdPlaca1.isSelected()) {
+                column = 5;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Placa"
+                        : "Plate";
+            }else if(rdAno1.isSelected()) {
+                column = 6;
+                type = (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES)
+                        ? "Ano"
+                        : "Year";
             }
-        }
 
-        if(!found) { //se n foi encontrado
-            JOptionPane.showMessageDialog(this, type + " { " + searchText + " } de carro não encontrado !",
-                type + " Não Encontrado", JOptionPane.ERROR_MESSAGE);
-        }
+            for(int i = 0; i < tblModelCarro.getRowCount(); ++i) { //percorre tabela
+                if(!rdId1.isSelected()) { //se n for rdId q esta selecionaddo
+                    String nome = String.valueOf(tblModelCarro.getValueAt(i, column)).trim();
 
-        //use se precisar - take it if it is nedded
-        //        if(rdId.isSelected()) {
-            //            long id = Long.parseLong(txtPesquisa.getText()); //pega id de pesquisa
-            //
-            //            for(int i = 0; i < tblModel.getRowCount(); ++i) { //percorre tabela
-                //                if(id == (Long)tblModel.getValueAt(i, 0)) { //procura id na linha i coluna 0 de ids
-                    //                    found = true;
-                    //                    tblCliente.setRowSelectionInterval(i, i); //seleciona linha
-                    //                }
-                //            }
-            //
-            //            if(!found) { //se n foi encontrado
-                //                JOptionPane.showMessageDialog(this, "Id { " + id + " } não encontrado!",
-                    //                    "Id Não Encontrado", JOptionPane.ERROR_MESSAGE);
-                //            }
-            //        }
+                    if(nome.toLowerCase().contains(searchText)
+                        || nome.toUpperCase().contains(searchText) ) { //se contiver nome capitalizado ou não
+                        found = true;
+                        tblCarro.addRowSelectionInterval(i, i); //seleciona linha
+                    }
+                }else {
+                    if(searchText.equals(String.valueOf(
+                        tblModelCarro.getValueAt(i, column)).trim())) { //procura valor na linha i coluna 'column' de ids
+                        found = true;
+                        tblCarro.addRowSelectionInterval(i, i); //seleciona linha
+                    }   
+                }
+            }
+
+            if(!found) { //se n foi encontrado
+                if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                    JOptionPane.showMessageDialog(this, type + " { " + searchText + " } não encontrado!",
+                        type + " Não Encontrado", JOptionPane.ERROR_MESSAGE);
+                }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                    JOptionPane.showMessageDialog(this, type + " { " + searchText + " } not found!",
+                        type + " Not Found!", JOptionPane.ERROR_MESSAGE);
+                }
+
+            }
+                
+        }else { //se barra de pesquisa vazia
+            
+            if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                JOptionPane.showMessageDialog(this, "Preencha a barra de pesquisa!", 
+                        "Barra de Pesquisa Vazia!", JOptionPane.ERROR_MESSAGE);
+            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                JOptionPane.showMessageDialog(this, "Fill out search bar!", 
+                    "Empty Search Bar!", JOptionPane.ERROR_MESSAGE);
+            }
+            
+        }
     }//GEN-LAST:event_btnPesquisa1ActionPerformed
 
     private void rdAno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdAno1ActionPerformed
@@ -1277,8 +1409,15 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
                 locacaoEditCarro.requestFocus();
             }
         }else {
-            JOptionPane.showMessageDialog(this, "Selecione a linha do carro que deseja editar",
-                "Sem seleção!", JOptionPane.ERROR_MESSAGE);
+            
+            if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {            
+                JOptionPane.showMessageDialog(this, "Linha não selecionada!",
+                    "Sem Seleção!", JOptionPane.ERROR_MESSAGE);
+            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {                           
+                JOptionPane.showMessageDialog(this, "Select a line!",
+                    "No Selection!", JOptionPane.ERROR_MESSAGE);
+            }
+            
         }
         
     }//GEN-LAST:event_btnEdicao1ActionPerformed
@@ -1317,8 +1456,15 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
                 locacaoEditMoto.requestFocus();
             }
         }else {
-            JOptionPane.showMessageDialog(this, "Selecione a linha da moto que deseja editar",
-                "Sem seleção!", JOptionPane.ERROR_MESSAGE);
+            
+            if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {            
+                JOptionPane.showMessageDialog(this, "Linha não selecionada!",
+                    "Sem Seleção!", JOptionPane.ERROR_MESSAGE);
+            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {                           
+                JOptionPane.showMessageDialog(this, "Select a line!",
+                    "No Selection!", JOptionPane.ERROR_MESSAGE);
+            }
+            
         }
     }//GEN-LAST:event_btnEdicao2ActionPerformed
 
@@ -1939,6 +2085,11 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
     }
     
+    public boolean placeholderOrEmpty(JTextField comp) { //verifica se campo tem texto de exemplo padrao
+        return comp.getForeground() == DesignApp.FIELD_FONT_TIP_COLOR
+            || comp.getText().trim().isEmpty();
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCad;
     private javax.swing.JButton btnEdicao1;
@@ -2073,7 +2224,10 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
     public void updateLangComponents() {
         
         if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) { //se idioma eh ingles
-            setTitle("FastVehicles | Manage Vehicles");
+            setTitle("FastVehicles | Locator - " 
+                    + locadoraAtual.getNome().toUpperCase() 
+                    + " - Manage Vehicles"
+                );
             mnOpcoes.setText("Settings");
             mnLang.setText("Language");
             mniPortugues.setText("Portuguese");
@@ -2081,7 +2235,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
             mnTema.setText("Theme");
             
             tbVeiculo.setTitleAt(0, "All");
-            tbVeiculo.setTitleAt(0, "New");
+            tbVeiculo.setTitleAt(1, "New");
             
             for(FocusListener focus: txtPesquisa1.getFocusListeners()) {
                 txtPesquisa1.removeFocusListener(focus); //remove foucs listener em portugues
@@ -2139,8 +2293,6 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
             tblColumnModelMoto.getColumn(7).setHeaderValue("RentDay");
             tblMoto.getTableHeader().resizeAndRepaint();
             
-            btnPesquisa1.setToolTipText("Press to search");
-            btnPesquisa2.setToolTipText("Press to search");  
             
             btnEdicao1.setText("Edit");
             btnEdicao2.setText("Edit");
@@ -2162,12 +2314,59 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
             lblCilindradas.setText("Cylinder cap.");
             
             rdCarro.setText("Car");
-            rdCarro.setText("Bike");
+            rdMoto.setText("Bike");
             btnCad.setText("Add");
+            
+            btnPesquisa1.setToolTipText("Press to search");
+            btnPesquisa2.setToolTipText("Press to search");
+            txtPesquisa1.setToolTipText("Search bar");
+            txtPesquisa2.setToolTipText("Search bar");            
+            rdId1.setToolTipText("Search by id");
+            rdId2.setToolTipText("Search by id");  
+            rdPlaca1.setToolTipText("Search by plate");
+            rdPlaca2.setToolTipText("Search by plate");
+            rdCor1.setToolTipText("Search by color");
+            rdCor2.setToolTipText("Search by color");
+            rdModelo1.setToolTipText("Search by model");
+            rdModelo2.setToolTipText("Search by model");
+            rdTipo1.setToolTipText("Search by type");
+            rdTipo2.setToolTipText("Search by type");
+            rdMarca1.setToolTipText("Search by brand");
+            rdMarca2.setToolTipText("Search by brand");
+            rdAno1.setToolTipText("Search by year");
+            rdAno2.setToolTipText("Search by year");
+
+            tblCarro.setToolTipText("cars");
+            btnEdicao1.setToolTipText("Edit a car");
+            btnExcluir1.setToolTipText("Delete car, 1 per time");
+
+            tblMoto.setToolTipText("bikes");
+            btnEdicao2.setToolTipText("Edit a bike");
+            btnExcluir2.setToolTipText("Delete bike, 1 per time");  
+            
+            //segunda tab tips
+            txtTipo.setToolTipText("Vehicle type");
+            txtMarca.setToolTipText("Vehicle brand");
+            txtModelo.setToolTipText("Vehicle model");
+            txtCor.setToolTipText("Vehicle color");
+            txtCombustivel.setToolTipText("Vehicle fuel");
+            spAno.setToolTipText("Vehicle year");
+            spKm.setToolTipText("Vehicle mileage");
+            txtPlaca.setToolTipText("Vehicle plate");
+            spCaucao.setToolTipText("Vehicle deposit");
+            spValorDiario.setToolTipText("Vehicle rent day");
+            txtMotor.setToolTipText("Vehicle engine");
+            spCavalos.setToolTipText("Car horses");
+            spPortas.setToolTipText("Car doors");
+            spCilindradas.setToolTipText("Bike cylinder capacity");
+            btnCad.setToolTipText("Register vehicle");
             
 	}else if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) { //se for portugues
             
-            setTitle("FastVehicles | Gerenciar Veículos");
+            setTitle("FastVehicles | Locadora - " 
+                    + locadoraAtual.getNome().toUpperCase() 
+                    + " - Gerenciar Veículos"
+                );
             
             mnOpcoes.setText("Opções");
             mnLang.setText("Linguagem");
@@ -2176,7 +2375,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
             mnTema.setText("Tema");
             
             tbVeiculo.setTitleAt(0, "Todos");
-            tbVeiculo.setTitleAt(0, "Cadastro");
+            tbVeiculo.setTitleAt(1, "Cadastro");
             
             for(FocusListener focus: txtPesquisa1.getFocusListeners()) {
                 txtPesquisa1.removeFocusListener(focus); //remove foucs listener em portugues
@@ -2233,10 +2432,7 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
             tblColumnModelMoto.getColumn(7).setHeaderValue("ValorDiário");
             tblMoto.getTableHeader().resizeAndRepaint();
             
-            
-            btnPesquisa1.setToolTipText("Clique para pesquisar");
-            btnPesquisa2.setToolTipText("Clique para pesquisar");  
-            
+            //primeira tab tips
             btnEdicao1.setText("Editar");
             btnEdicao2.setText("Editar");
             btnExcluir1.setText("Excluir");
@@ -2258,8 +2454,50 @@ public class LocadoraAdmVeiculos extends javax.swing.JFrame
             lblCilindradas.setText("Cilindradas");
             
             rdCarro.setText("Carro");
-            rdCarro.setText("Moto");
+            rdMoto.setText("Moto");
             btnCad.setText("Cadastrar");
+            
+            btnPesquisa1.setToolTipText("Clique para pesquisar");
+            btnPesquisa2.setToolTipText("Clique para pesquisar");           
+            txtPesquisa1.setToolTipText("Barra de pesquisa");
+            txtPesquisa2.setToolTipText("Barra de pesquisa");            
+            rdId1.setToolTipText("Pesquise por id");
+            rdId2.setToolTipText("Pesquise por id");  
+            rdPlaca1.setToolTipText("Pesquise por placa");
+            rdPlaca2.setToolTipText("Pesquise por placa");
+            rdCor1.setToolTipText("Pesquise por cor");
+            rdCor2.setToolTipText("Pesquise por cor");
+            rdModelo1.setToolTipText("Pesquise por modelo");
+            rdModelo2.setToolTipText("Pesquise por modelo");
+            rdTipo1.setToolTipText("Pesquise por tipo");
+            rdTipo2.setToolTipText("Pesquise por tipo");
+            rdMarca1.setToolTipText("Pesquise por marca");
+            rdMarca2.setToolTipText("Pesquise por marca");
+            rdAno1.setToolTipText("Pesquise por ano");
+            rdAno2.setToolTipText("Pesquise por ano");
+            tblCarro.setToolTipText("carros");
+            btnEdicao1.setToolTipText("Edite um carro");
+            btnEdicao1.setToolTipText("Deletar carro, 1 por vez");
+            tblMoto.setToolTipText("motos");
+            btnEdicao1.setToolTipText("Edite uma moto");
+            btnEdicao1.setToolTipText("Deletar moto, 1 por vez");   
+            
+            //segunda tab tips
+            txtTipo.setToolTipText("Tipo do veículo");
+            txtMarca.setToolTipText("Marca do veículo");
+            txtModelo.setToolTipText("Modelo do veículo");
+            txtCor.setToolTipText("Cor do veículo");
+            txtCombustivel.setToolTipText("Combustível do veículo");
+            spAno.setToolTipText("Ano do veículo");
+            spKm.setToolTipText("Quilometragem do veículo");
+            txtPlaca.setToolTipText("Placa do veículo");
+            spCaucao.setToolTipText("Caução do veículo");
+            spValorDiario.setToolTipText("Valor diário do veículo");
+            txtMotor.setToolTipText("Motor do veículo");
+            spCavalos.setToolTipText("Cavalos do carro");
+            spPortas.setToolTipText("Portas do carro");
+            spCilindradas.setToolTipText("Cilindradas da moto");
+            btnCad.setToolTipText("Cadastrar veículo");
             
 	}
    }

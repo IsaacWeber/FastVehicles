@@ -29,13 +29,13 @@ import modelos.Locadora;
  * @author Isaac
  */
 public class LocadoraEditCarro extends javax.swing.JFrame
-    implements FrameTheme, WindowListener, FrameLang {
-    
+        implements FrameTheme, WindowListener, FrameLang {
+
     private LocadoraDao locadoraDao = InstanceDao.LOCADORA_DAO;
     private CarroDao carroDao = InstanceDao.CARRO_DAO;
     private MotoDao motoDao = InstanceDao.MOTO_DAO;
     private Locadora locadoraAtual; //locadora add na classe anterior pelo addLocadora - locator added in the ancient class
-   // private Locadora locadoraAtual = locadoraDao.get(1L) ; //to test
+    // private Locadora locadoraAtual = locadoraDao.get(1L) ; //to test
     private LocadoraAdmVeiculos locadoraAdmVeiculos;
     private Carro carroAtual;
     private SpinnerNumberModel anoSpModel;
@@ -54,7 +54,6 @@ public class LocadoraEditCarro extends javax.swing.JFrame
         addWindowListener(this);
     }
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -377,22 +376,20 @@ public class LocadoraEditCarro extends javax.swing.JFrame
     }//GEN-LAST:event_txtTipoActionPerformed
 
 
-    
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-          if(!isEmpty(txtTipo)) {
-           if(!isEmpty(txtMarca)) {
-               if(!isEmpty(txtModelo)) {
-                   if(!isEmpty(txtCombustivel)) {
-                       if(!isEmpty(txtCor)) {
-                            if(!isEmpty(txtPlaca)) {
-                                if(!isEmpty(txtMotor)) {
+        if (!isEmpty(txtTipo)) {
+            if (!isEmpty(txtMarca)) {
+                if (!isEmpty(txtModelo)) {
+                    if (!isEmpty(txtCombustivel)) {
+                        if (!isEmpty(txtCor)) {
+                            if (!isEmpty(txtPlaca)) {
+                                if (!isEmpty(txtMotor)) {
 
                                     //edita objeto carro
-                                    
                                     carroAtual.setTipo(txtTipo.getText().trim());
                                     carroAtual.setMarca(txtMarca.getText().trim());
                                     carroAtual.setModelo(txtModelo.getText().trim());
-                                    carroAtual.setCor(txtCor.getText().trim()) ;
+                                    carroAtual.setCor(txtCor.getText().trim());
                                     carroAtual.setCombustivel(txtCombustivel.getText().trim());
                                     carroAtual.setAno(anoSpModel.getNumber().intValue());
                                     carroAtual.setQuilometragem(kmSpModel.getNumber().longValue());
@@ -403,8 +400,7 @@ public class LocadoraEditCarro extends javax.swing.JFrame
                                     carroAtual.setCavalos(cavalosSpModel.getNumber().intValue());
                                     carroAtual.setPortas(portasSpModel.getNumber().intValue());
                                     carroAtual.setLocadora(locadoraAtual);
-                                     
-                                    
+
                                     locadoraAtual.getVeiculos().remove(carroAtual); //remove carro atual 
                                     carroDao.update(carroAtual, null); //atualiza carro no bd
 
@@ -412,45 +408,102 @@ public class LocadoraEditCarro extends javax.swing.JFrame
                                     locadoraAdmVeiculos.updateTblCarro(); //atualiza tabela carro
 
                                     //mensagem de cadastro com sucesso
-                                     URL url = getClass().getResource("/images/success.png");
-                                     ImageIcon sucessIcon = new ImageIcon(url);
-                                     JOptionPane.showMessageDialog(this, "Veículo editado com sucesso!", 
-                                         "Veículo Editado!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
-                                     
-                                }else {
-                                     JOptionPane.showMessageDialog(this, "O campo \'Motor\' está vazio", "Motor vazio", 
-                                          JOptionPane.ERROR_MESSAGE);
-                                 }
-                             }else {
-                                 JOptionPane.showMessageDialog(this, "O campo \'Placa\' está vazio", "Placa vazia", 
-                                      JOptionPane.ERROR_MESSAGE);
-                             }
-                        }else {
-                            JOptionPane.showMessageDialog(this, "O campo \'Cor\' está vazio", "Cor vazia", 
-                                JOptionPane.ERROR_MESSAGE);
+                                    URL url = getClass().getResource("/images/success.png");
+                                    ImageIcon sucessIcon = new ImageIcon(url);
+
+                                    if (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                                        JOptionPane.showMessageDialog(this, "Veículo editado com sucesso!",
+                                                "Veículo Editado!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+                                    } else if (IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                                        JOptionPane.showMessageDialog(this, "Vehicle successfully edited!",
+                                                "Vehicle Edited!", JOptionPane.PLAIN_MESSAGE, sucessIcon);
+                                    }
+
+                                } else {
+
+                                    if (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                                        JOptionPane.showMessageDialog(this, "O campo \'Motor\' está vazio!", "Campo Motor Vazio!",
+                                                JOptionPane.ERROR_MESSAGE);
+                                    } else if (IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                                        JOptionPane.showMessageDialog(this, "\'Engine\' field is empty!", "Empty Engine Field!",
+                                                JOptionPane.ERROR_MESSAGE);
+                                    }
+
+                                }
+
+                            } else {
+
+                                if (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                                    JOptionPane.showMessageDialog(this, "O campo \'Placa\' está vazio!", "Campo Placa Vazio!",
+                                            JOptionPane.ERROR_MESSAGE);
+                                } else if (IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                                    JOptionPane.showMessageDialog(this, "\'Plate\' field is empty!", "Empty Plate Field!",
+                                            JOptionPane.ERROR_MESSAGE);
+                                }
+
+                            }
+
+                        } else {
+
+                            if (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                                JOptionPane.showMessageDialog(this, "O campo \'Cor\' está vazio!", "Campo Cor Vazio!",
+                                        JOptionPane.ERROR_MESSAGE);
+                            } else if (IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                                JOptionPane.showMessageDialog(this, "\'Color\' field is empty!", "Empty Color Field!",
+                                        JOptionPane.ERROR_MESSAGE);
+                            }
+
                         }
-                        
-                    }else {
-                        JOptionPane.showMessageDialog(this, "O campo \'Combustível\' está vazio", "Combustível vazio", 
-                             JOptionPane.ERROR_MESSAGE);
+
+                    } else {
+
+                        if (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                            JOptionPane.showMessageDialog(this, "O campo \'Combustível\' está vazio!", "Campo Combustível Vazio!",
+                                    JOptionPane.ERROR_MESSAGE);
+                        } else if (IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                            JOptionPane.showMessageDialog(this, "\'Fuel\' field is empty!", "Empty Fuel Field!",
+                                    JOptionPane.ERROR_MESSAGE);
+                        }
+
                     }
-                }else {
-                    JOptionPane.showMessageDialog(this, "O campo \'Modelo\' está vazio", "Modelo vazio", 
-                         JOptionPane.ERROR_MESSAGE);
+
+                } else {
+
+                    if (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                        JOptionPane.showMessageDialog(this, "O campo \'Modelo\' está vazio!", "Campo Modelo Vazio!",
+                                JOptionPane.ERROR_MESSAGE);
+                    } else if (IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                        JOptionPane.showMessageDialog(this, "\'Model\' field is empty!", "Empty Model Field!",
+                                JOptionPane.ERROR_MESSAGE);
+                    }
+
                 }
-               
-           }else {
-               JOptionPane.showMessageDialog(this, "O campo \'Marca\' está vazio", "Marca vazia", 
-                    JOptionPane.ERROR_MESSAGE);
-           }
-           
-        }else{
-            JOptionPane.showMessageDialog(this, "O campo \'Tipo\' está vazio", "Tipo vazio", 
-                    JOptionPane.ERROR_MESSAGE);
+
+            } else {
+
+                if (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                    JOptionPane.showMessageDialog(this, "O campo \'Marca\' está vazio!", "Campo Marca Vazio!",
+                            JOptionPane.ERROR_MESSAGE);
+                } else if (IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                    JOptionPane.showMessageDialog(this, "\'Brand\' field is empty!", "Empty Brand Field!",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+
+            }
+
+        } else {
+            if (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {
+                JOptionPane.showMessageDialog(this, "O campo \'Tipo\' está vazio!", "Campo Tipo Vazio!",
+                        JOptionPane.ERROR_MESSAGE);
+            } else if (IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+                JOptionPane.showMessageDialog(this, "\'Type\' field is empty!", "Empty Type Field!",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+
         }
 
     }//GEN-LAST:event_btnSalvarActionPerformed
-    
+
     /**
      * @param args the command line arguments
      */
@@ -487,16 +540,17 @@ public class LocadoraEditCarro extends javax.swing.JFrame
     }
 
     public void extraConfigs() {
-        setTitle("FastVehicles | Editar Carro" 
-                + carroAtual.getModelo().toUpperCase());
+        setTitle("FastVehicles | Locadora - " + locadoraAtual.getNome().toUpperCase()
+                + " - Editar Carro - " + carroAtual.getModelo().toUpperCase());
+        
         //configs do frame - frames config
         setLocationRelativeTo(null);
         //coloca icone no jframe - insert icon on jframe
         URL url = getClass().getResource("/images/car-default-img.png");
-        if(!(url == null)) {
+        if (!(url == null)) {
             setIconImage(new ImageIcon(url).getImage());
         }
-        
+
         //confgs dos elementos - elements config
         lblId.setFont(DesignApp.fonteGeral);
         lblTipo.setFont(DesignApp.fonteGeral);
@@ -516,7 +570,7 @@ public class LocadoraEditCarro extends javax.swing.JFrame
         txtId.setFont(DesignApp.fonteGeral);
         txtId.setEnabled(false);
         txtId.setText(String.valueOf(carroAtual.getId()));
-        
+
         txtTipo.setFont(DesignApp.fonteGeral);
         txtMarca.setFont(DesignApp.fonteGeral);
         txtModelo.setFont(DesignApp.fonteGeral);
@@ -531,52 +585,52 @@ public class LocadoraEditCarro extends javax.swing.JFrame
         spCavalos.setFont(DesignApp.fonteGeral);
         spPortas.setFont(DesignApp.fonteGeral);
         btnSalvar.setFont(DesignApp.fonteGeral);
-        
+
         //instanciating spinner models
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         anoSpModel = new SpinnerNumberModel(currentYear, 1980, currentYear, 1);
-        kmSpModel = new SpinnerNumberModel(100, 0, 1000000000, 10); 
-        cavalosSpModel = new SpinnerNumberModel(50, 1, 100000, 10); 
-        portasSpModel = new SpinnerNumberModel(2, 1, 100, 1); 
+        kmSpModel = new SpinnerNumberModel(100, 0, 1000000000, 10);
+        cavalosSpModel = new SpinnerNumberModel(50, 1, 100000, 10);
+        portasSpModel = new SpinnerNumberModel(2, 1, 100, 1);
         caucaoSpModel = new SpinnerNumberModel(200, 0, 10000000, 5);
         valorDiarioSpModel = new SpinnerNumberModel(50, 1, 10000000, 5);
-        
+
         spAno.setModel(anoSpModel);
         spKm.setModel(kmSpModel);
         spCavalos.setModel(cavalosSpModel);
         spPortas.setModel(portasSpModel);
         spCaucao.setModel(caucaoSpModel);
         spValorDiario.setModel(valorDiarioSpModel);
-        
-        txtTipo.addFocusListener(new TipNoFocus(txtTipo, 
+
+        txtTipo.addFocusListener(new TipNoFocus(txtTipo,
                 "Ex.: Compacto",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtMarca.addFocusListener(new TipNoFocus(txtMarca, 
+        txtMarca.addFocusListener(new TipNoFocus(txtMarca,
                 "Ex.: Hyundai",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtModelo.addFocusListener(new TipNoFocus(txtModelo, 
-                "Ex.: HB20X", 
+        txtModelo.addFocusListener(new TipNoFocus(txtModelo,
+                "Ex.: HB20X",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtCor.addFocusListener(new TipNoFocus(txtCor, 
-                "Ex.: Prata", 
+        txtCor.addFocusListener(new TipNoFocus(txtCor,
+                "Ex.: Prata",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtCombustivel.addFocusListener(new TipNoFocus(txtCombustivel, 
-                "Ex.: Etanol", 
+        txtCombustivel.addFocusListener(new TipNoFocus(txtCombustivel,
+                "Ex.: Etanol",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtPlaca.addFocusListener(new TipNoFocus(txtPlaca, 
-                "Ex.: CMG-3164", 
+        txtPlaca.addFocusListener(new TipNoFocus(txtPlaca,
+                "Ex.: CMG-3164",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtMotor.addFocusListener(new TipNoFocus(txtMotor, 
+        txtMotor.addFocusListener(new TipNoFocus(txtMotor,
                 "Ex.:  1.0 litro flex aspirado e câmbio manual",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        
+
         txtTipo.setForeground(DesignApp.FIELD_FONT_COLOR);
         txtMarca.setForeground(DesignApp.FIELD_FONT_COLOR);
         txtModelo.setForeground(DesignApp.FIELD_FONT_COLOR);
@@ -584,7 +638,7 @@ public class LocadoraEditCarro extends javax.swing.JFrame
         txtCombustivel.setForeground(DesignApp.FIELD_FONT_COLOR);
         txtPlaca.setForeground(DesignApp.FIELD_FONT_COLOR);
         txtMotor.setForeground(DesignApp.FIELD_FONT_COLOR);
-        
+
         txtTipo.setText(carroAtual.getTipo());
         txtMarca.setText(carroAtual.getMarca());
         txtModelo.setText(carroAtual.getModelo());
@@ -598,30 +652,30 @@ public class LocadoraEditCarro extends javax.swing.JFrame
         valorDiarioSpModel.setValue(carroAtual.getValorDiario());
         cavalosSpModel.setValue(carroAtual.getCavalos());
         portasSpModel.setValue(carroAtual.getPortas());
-        
-          //update lang
-        if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
+
+        //update lang
+        if (IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {
             updateLangComponents();
         }
     }
-    
+
     public void addCarro(Carro c) {
         this.carroAtual = c;
         extraConfigs();
     }
-    
+
     public void addLocadora(Locadora loc) {
         locadoraAtual = loc;
     }
-    
-    private boolean isEmpty(JComponent comp) {  
-        return comp.getForeground() == DesignApp.FIELD_FONT_TIP_COLOR ? true: false;
+
+    private boolean isEmpty(JComponent comp) {
+        return comp.getForeground() == DesignApp.FIELD_FONT_TIP_COLOR ? true : false;
     }
-    
+
     public void addLocAdmVeiculos(LocadoraAdmVeiculos lav) {
         this.locadoraAdmVeiculos = lav;
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSalvar;
     private javax.swing.JScrollPane jScrollPane1;
@@ -667,7 +721,7 @@ public class LocadoraEditCarro extends javax.swing.JFrame
         txtCombustivel.setText("");
         txtPlaca.setText("");
         txtMotor.setText("");
-        
+
         txtTipo.setForeground(DesignApp.FIELD_FONT_COLOR);
         txtMarca.setForeground(DesignApp.FIELD_FONT_COLOR);
         txtModelo.setForeground(DesignApp.FIELD_FONT_COLOR);
@@ -675,68 +729,66 @@ public class LocadoraEditCarro extends javax.swing.JFrame
         txtCombustivel.setForeground(DesignApp.FIELD_FONT_COLOR);
         txtPlaca.setForeground(DesignApp.FIELD_FONT_COLOR);
         txtMotor.setForeground(DesignApp.FIELD_FONT_COLOR);
-        
-        for(FocusListener focus: txtTipo.getFocusListeners()) { //percorre listeneers
+
+        for (FocusListener focus : txtTipo.getFocusListeners()) { //percorre listeneers
             txtTipo.removeFocusListener(focus);//remove focus listeners
         }
 
-
-         for(FocusListener focus: txtMarca.getFocusListeners()) { //percorre listeneers
+        for (FocusListener focus : txtMarca.getFocusListeners()) { //percorre listeneers
             txtMarca.removeFocusListener(focus);//remove focus listeners
         }
-        
-        for(FocusListener focus: txtModelo.getFocusListeners()) { //percorre listeneers
+
+        for (FocusListener focus : txtModelo.getFocusListeners()) { //percorre listeneers
             txtModelo.removeFocusListener(focus);//remove focus listeners
         }
-        
-        for(FocusListener focus: txtCor.getFocusListeners()) { //percorre listeneers
+
+        for (FocusListener focus : txtCor.getFocusListeners()) { //percorre listeneers
             txtCor.removeFocusListener(focus);//remove focus listeners
         }
-        
-        for(FocusListener focus: txtCombustivel.getFocusListeners()) { //percorre listeneers
+
+        for (FocusListener focus : txtCombustivel.getFocusListeners()) { //percorre listeneers
             txtCombustivel.removeFocusListener(focus);//remove focus listeners
         }
-        
-        for(FocusListener focus: txtPlaca.getFocusListeners()) { //percorre listeneers
+
+        for (FocusListener focus : txtPlaca.getFocusListeners()) { //percorre listeneers
             txtPlaca.removeFocusListener(focus);//remove focus listeners
         }
-        
-        for(FocusListener focus: txtMotor.getFocusListeners()) { //percorre listeneers
+
+        for (FocusListener focus : txtMotor.getFocusListeners()) { //percorre listeneers
             txtMotor.removeFocusListener(focus);//remove focus listeners
         }
-        
-        
-        txtTipo.addFocusListener(new TipNoFocus(txtTipo, 
+
+        txtTipo.addFocusListener(new TipNoFocus(txtTipo,
                 "Ex.: Compacto",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtMarca.addFocusListener(new TipNoFocus(txtMarca, 
+        txtMarca.addFocusListener(new TipNoFocus(txtMarca,
                 "Ex.: Hyundai",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtModelo.addFocusListener(new TipNoFocus(txtModelo, 
-                "Ex.: HB20X", 
+        txtModelo.addFocusListener(new TipNoFocus(txtModelo,
+                "Ex.: HB20X",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtCor.addFocusListener(new TipNoFocus(txtCor, 
-                "Ex.: Prata", 
+        txtCor.addFocusListener(new TipNoFocus(txtCor,
+                "Ex.: Prata",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtCombustivel.addFocusListener(new TipNoFocus(txtCombustivel, 
-                "Ex.: Etanol", 
+        txtCombustivel.addFocusListener(new TipNoFocus(txtCombustivel,
+                "Ex.: Etanol",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtPlaca.addFocusListener(new TipNoFocus(txtPlaca, 
-                "Ex.: CMG-3164", 
+        txtPlaca.addFocusListener(new TipNoFocus(txtPlaca,
+                "Ex.: CMG-3164",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
-        txtMotor.addFocusListener(new TipNoFocus(txtMotor, 
+        txtMotor.addFocusListener(new TipNoFocus(txtMotor,
                 "Ex.:  1.0 litro flex aspirado e câmbio manual",
                 DesignApp.FIELD_FONT_COLOR,
                 DesignApp.FIELD_FONT_TIP_COLOR, 0));
     }
-    
-     //window listener
+
+    //window listener
     @Override
     public void windowOpened(WindowEvent e) {
         InstanceFrame.addFrame(this); //adiciona frame na lista de frames abertos
@@ -744,7 +796,7 @@ public class LocadoraEditCarro extends javax.swing.JFrame
 
     @Override
     public void windowClosing(WindowEvent e) {
-      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -771,13 +823,13 @@ public class LocadoraEditCarro extends javax.swing.JFrame
     public void windowDeactivated(WindowEvent e) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-        //update lang method
+
+    //update lang method
     @Override
     public void updateLangComponents() {
-        if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) { //se idioma eh ingles
-	    setTitle("FastVehicles | Edit" 
-                + carroAtual.getModelo().toUpperCase());
+        if (IdiomaApp.idiomaAtual == IdiomaApp.INGLES) { //se idioma eh ingles
+            setTitle("FastVehicles | Locator - " + locadoraAtual.getNome().toUpperCase()
+                    + " - Edit Car - " + carroAtual.getModelo().toUpperCase());
 
             lblTipo.setText("Type");
             lblModelo.setText("Model");
@@ -792,13 +844,30 @@ public class LocadoraEditCarro extends javax.swing.JFrame
             lblMotor.setText("Engine");
             lblCavalos.setText("Horses");
             lblPortas.setText("Doors");
-            
+
             btnSalvar.setText("Save");
-        
-	}else if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) { //se for portugues
-            setTitle("FastVehicles | Editar Carro" 
-                + carroAtual.getModelo().toUpperCase());
-            
+
+            //tips
+            txtId.setToolTipText("Vehicle id");
+            txtTipo.setToolTipText("Vehicle type");
+            txtMarca.setToolTipText("Vehicle brand");
+            txtModelo.setToolTipText("Vehicle model");
+            txtCor.setToolTipText("Vehicle color");
+            txtCombustivel.setToolTipText("Vehicle fuel");
+            spAno.setToolTipText("Vehicle year");
+            spKm.setToolTipText("Vehicle mileage");
+            txtPlaca.setToolTipText("Vehicle plate");
+            spCaucao.setToolTipText("Vehicle deposit");
+            spValorDiario.setToolTipText("Vehicle rent day");
+            txtMotor.setToolTipText("Vehicle engine");
+            spCavalos.setToolTipText("Car horses");
+            spPortas.setToolTipText("Car doors");
+            btnSalvar.setToolTipText("Save data");
+
+        } else if (IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) { //se for portugues
+            setTitle("FastVehicles | Locadora - " + locadoraAtual.getNome().toUpperCase()
+                    + " - Editar Carro - " + carroAtual.getModelo().toUpperCase());
+
             lblTipo.setText("Tipo");
             lblModelo.setText("Modelo");
             lblCor.setText("Cor");
@@ -812,9 +881,26 @@ public class LocadoraEditCarro extends javax.swing.JFrame
             lblMotor.setText("Motor");
             lblCavalos.setText("Cavalos");
             lblPortas.setText("Portas");
-            
+
             btnSalvar.setText("Salvar");
 
-	}
+            //tips
+            txtId.setToolTipText("Id do veículo");
+            txtTipo.setToolTipText("Tipo do veículo");
+            txtMarca.setToolTipText("Marca do veículo");
+            txtModelo.setToolTipText("Modelo do veículo");
+            txtCor.setToolTipText("Cor do veículo");
+            txtCombustivel.setToolTipText("Combustível do veículo");
+            spAno.setToolTipText("Ano do veículo");
+            spKm.setToolTipText("Quilometragem do veículo");
+            txtPlaca.setToolTipText("Placa do veículo");
+            spCaucao.setToolTipText("Caução do veículo");
+            spValorDiario.setToolTipText("Valor diário do veículo");
+            txtMotor.setToolTipText("Motor do veículo");
+            spCavalos.setToolTipText("Cavalos do carro");
+            spPortas.setToolTipText("Portas do carro");
+            btnSalvar.setToolTipText("Salvar dados");
+
+        }
     }
 }

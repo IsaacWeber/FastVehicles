@@ -3,10 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/LocadoraEditLoc.java</file>
-            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/LocadoraAdmVeiculos.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/CadastroCartao.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/CadastroLocadora.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/ClienteCartoes.java</file>
             <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/LocadoraLocacoes.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/CadastroCliente.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/VerDadosClienteLocacao.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/LocadoraAdmCliente.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/CarroDados.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/EntradaCliente.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/LocadoraEditMoto.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/Entrada.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/LocacaoFrame.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/LocadoraAdmVeiculos.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/LocadoraEditLoc.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/EntradaLocadora.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/MotoDados.java</file>
             <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/ClienteAcesso.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/VerDadosLocadoraLocacao.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/LocadoraEditCarro.java</file>
+            <file>file:/C:/Users/Isaac/Documents/NetBeansProjects/FastVehiclesMain/src/frames/ClienteLocacoes.java</file>
         </group>
     </open-files>
 </project-private>

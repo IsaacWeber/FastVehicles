@@ -567,6 +567,22 @@ public class MotoDados extends javax.swing.JFrame
             lblMotor.setText("Engine");
             lblCilindradas.setText("Cylinder cap.");
             
+            //tips
+            txtId.setToolTipText("Vehicle id");
+            txtTipo.setToolTipText("Tipo do veículo");
+            txtMarca.setToolTipText("Marca do veículo");
+            txtModelo.setToolTipText("Modelo do veículo");
+            txtCor.setToolTipText("Cor do veículo");
+            txtCombustivel.setToolTipText("Combustível do veículo");
+            spAno.setToolTipText("Ano do veículo");
+            spKm.setToolTipText("Quilometragem do veículo");
+            txtPlaca.setToolTipText("Placa do veículo");
+            spCaucao.setToolTipText("Caução do veículo");
+            spValorDiario.setToolTipText("Valor diário do veículo");
+            txtMotor.setToolTipText("Motor do veículo");
+            spCilindradas.setToolTipText("Cilindradas da moto");
+            
+            
 	}else if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) { //se for portugues
             setTitle("FastVehicles | Dados da Moto - " 
             + motoAtual.getModelo().toUpperCase());
@@ -583,6 +599,21 @@ public class MotoDados extends javax.swing.JFrame
             lblValorDiario.setText("Valor Diário");
             lblMotor.setText("Motor");
             lblCilindradas.setText("Cilindradas");
+            
+            //tips
+            txtId.setToolTipText("Id do veículo");
+            txtTipo.setToolTipText("Tipo do veículo");
+            txtMarca.setToolTipText("Marca do veículo");
+            txtModelo.setToolTipText("Modelo do veículo");
+            txtCor.setToolTipText("Cor do veículo");
+            txtCombustivel.setToolTipText("Combustível do veículo");
+            spAno.setToolTipText("Ano do veículo");
+            spKm.setToolTipText("Quilometragem do veículo");
+            txtPlaca.setToolTipText("Placa do veículo");
+            spCaucao.setToolTipText("Caução do veículo");
+            spValorDiario.setToolTipText("Valor diário do veículo");
+            txtMotor.setToolTipText("Motor do veículo");
+
 	}
    }
 }

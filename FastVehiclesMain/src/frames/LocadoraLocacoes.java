@@ -164,8 +164,13 @@ public class LocadoraLocacoes extends javax.swing.JFrame
                 verDadosFrame.requestFocus();
             }
         }else { //se a linha nao esta selecionada - if line is not selected
-            JOptionPane.showMessageDialog(this, "Linha não selecionada",
-                "Sem Seleção!", JOptionPane.ERROR_MESSAGE);
+            if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) {            
+                JOptionPane.showMessageDialog(this, "Linha não selecionada!",
+                    "Sem Seleção!", JOptionPane.ERROR_MESSAGE);
+            }else if(IdiomaApp.idiomaAtual == IdiomaApp.INGLES) {                           
+                JOptionPane.showMessageDialog(this, "Select a line!",
+                    "No Selection!", JOptionPane.ERROR_MESSAGE);
+            }
         }
 
     }//GEN-LAST:event_btnVerActionPerformed
@@ -368,6 +373,9 @@ public class LocadoraLocacoes extends javax.swing.JFrame
             tblColumnModel.getColumn(5).setHeaderValue("Ticket");
             tblVeiculo.getTableHeader().resizeAndRepaint();
             
+            //tips
+            btnVer.setToolTipText("See rent data");
+            
 	}else if(IdiomaApp.idiomaAtual == IdiomaApp.PORTUGUES) { //se for portugues
             this.setTitle("FastVehicles | Veículos locados da Locadora - " 
                 + locadoraAtual.getNome().toUpperCase());
@@ -382,6 +390,9 @@ public class LocadoraLocacoes extends javax.swing.JFrame
             tblColumnModel.getColumn(5).setHeaderValue("Multa");
             tblVeiculo.getTableHeader().resizeAndRepaint();
 
+            //tips
+            btnVer.setToolTipText("Ver dados da locação");
+            
 	}
    }
     

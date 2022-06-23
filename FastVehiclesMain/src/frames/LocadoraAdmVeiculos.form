@@ -135,7 +135,7 @@
       <SubComponents>
         <Container class="javax.swing.JTabbedPane" name="tbVeiculo">
           <Properties>
-            <Property name="toolTipText" type="java.lang.String" value="Todos os ve&#xed;culos desta locadora"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
@@ -256,7 +256,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtPesquisa1">
                   <Properties>
-                    <Property name="toolTipText" type="java.lang.String" value="Campo de pesquisa"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Barra de pesquisa"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPesquisa1ActionPerformed"/>
@@ -279,7 +279,7 @@
                             <Column editable="true" title="Title 4" type="java.lang.Object"/>
                           </Table>
                         </Property>
-                        <Property name="toolTipText" type="java.lang.String" value="Tabela de carros"/>
+                        <Property name="toolTipText" type="java.lang.String" value="carros"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -290,6 +290,7 @@
                       <Image iconType="3" name="/images/delete.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Excluir"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Deletar moto, 1 por vez"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExcluir2ActionPerformed"/>
@@ -346,7 +347,7 @@
                     <Component class="javax.swing.JRadioButton" name="rdPlaca1">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="placa"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por cpf"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por placa"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdPlaca1ActionPerformed"/>
@@ -355,25 +356,25 @@
                     <Component class="javax.swing.JRadioButton" name="rdModelo1">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="modelo"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por rg"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por modelo"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rdMarca1">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="marca"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por email"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por marca"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rdTipo1">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="tipo"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por cnh"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por tipo"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rdAno1">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="ano"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por telefone"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por ano"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdAno1ActionPerformed"/>
@@ -382,6 +383,7 @@
                     <Component class="javax.swing.JRadioButton" name="rdCor1">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="cor"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por cor"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdCor1ActionPerformed"/>
@@ -406,7 +408,7 @@
                             <Column editable="true" title="Title 4" type="java.lang.Object"/>
                           </Table>
                         </Property>
-                        <Property name="toolTipText" type="java.lang.String" value="Tabela de motos"/>
+                        <Property name="toolTipText" type="java.lang.String" value="motos"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -493,7 +495,7 @@
                     <Component class="javax.swing.JRadioButton" name="rdPlaca2">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="placa"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por cpf"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por placa"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdPlaca2ActionPerformed"/>
@@ -502,30 +504,31 @@
                     <Component class="javax.swing.JRadioButton" name="rdModelo2">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="modelo"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por rg"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por modelo"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rdMarca2">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="marca"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por email"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por marca"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rdTipo2">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="tipo"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por cnh"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por tipo"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rdAno2">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="ano"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por telefone"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por ano"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rdCor2">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="cor"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Pesquise por cor"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdCor2ActionPerformed"/>
@@ -551,7 +554,7 @@
                       <Image iconType="3" name="/images/edit.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Editar"/>
-                    <Property name="toolTipText" type="java.lang.String" value="Edite um carro"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Edite uma moto"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEdicao2ActionPerformed"/>
@@ -993,6 +996,7 @@
                           <Image iconType="3" name="/images/signup.png"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Cadastrar"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Cadastrar ve&#xed;culo"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCadActionPerformed"/>
