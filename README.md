@@ -6,9 +6,9 @@
 * tema escuro e claro.
 * Disponível em português, inglês e espanhol.
 # Persistência de Dados
-* Banco de Dados usando padrão Data Access Object(DAO) para o manipular.
+* Banco de Dados.
+* Padrão Data Access Object(DAO) para o manipular.
 * SGBD MySQL.
-* Diagramação das tabelas. (Disponível no relatório fastvehicles.pdf)
 # Diagramação de Classes
 * UML para classes usando ferramenta Dia.
 * Diagramação do banco de dados. (Disponível no relatório fastvehicles.pdf) 
